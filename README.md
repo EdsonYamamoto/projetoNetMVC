@@ -1,2 +1,0 @@
-# projetoNetMVC
-projeto .net

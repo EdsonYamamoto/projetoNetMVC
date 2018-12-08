@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Evento -Event Html Template">
+    <meta name="keywords" content="Evento , Event , Html, Template">
+    <meta name="author" content="ColorLib">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ========== Title ========== -->
+    <title> Evento - Event Html Template</title>
+    <!-- ========== Favicon Ico ========== -->
+    <!--<link rel="icon" href="fav.ico">-->
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap CSS -->
+    <link href="~/wwwroot/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts Icon CSS -->
+    <link href="~/wwwroot/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/wwwroot/css/et-line.css" rel="stylesheet">
+    <link href="~/wwwroot/css/ionicons.min.css" rel="stylesheet">
+    <!-- Carousel CSS -->
+    <link href="~/wwwroot/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/wwwroot/css/owl.theme.default.min.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="~/wwwroot/css/animate.min.css">
+    <!-- Custom styles for this template -->
+    <link href="~/wwwroot/css/main.css" rel="stylesheet">
+
+
+    <!-- ========== Title ========== -->
+    <title> Evento - Event Html Template</title>
+    <!-- ========== Favicon Ico ========== -->
+    <!--<link rel="icon" href="fav.ico">-->
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap CSS -->
+    <link href="~/wwwroot/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts Icon CSS -->
+    <link href="~/wwwroot/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/wwwroot/css/et-line.css" rel="stylesheet">
+    <link href="~/wwwroot/css/ionicons.min.css" rel="stylesheet">
+    <!-- Carousel CSS -->
+    <link href="~/wwwroot/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/wwwroot/css/owl.theme.default.min.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="~/wwwroot/css/animate.min.css">
+    <!-- Custom styles for this template -->
+    <link href="~/wwwroot/css/main.css" rel="stylesheet">
+    <!-- jquery -->
+    <script src="~/wwwroot/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="~/wwwroot/js/popper.js"></script>
+    <script src="~/wwwroot/js/bootstrap.min.js"></script>
+    <script src="~/wwwroot/js/waypoints.min.js"></script>
+    <!--slick carousel -->
+    <script src="~/wwwroot/js/owl.carousel.min.js"></script>
+    <!--parallax -->
+    <script src="~/wwwroot/js/parallax.min.js"></script>
+    <!--Counter up -->
+    <script src="~/wwwroot/js/jquery.counterup.min.js"></script>
+    <!--Counter down -->
+    <script src="~/wwwroot/js/jquery.countdown.min.js"></script>
+    <!-- WOW JS -->
+    <script src="~/wwwroot/js/wow.min.js"></script>
+    <!-- Custom js -->
+    <script src="~/wwwroot/js/main.js"></script>
+</head>
+<body>
+
+    <header class="header navbar fixed-top navbar-inverse navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand logo" href="/Home">
+                <img src="~/wwwroot/img/logo.png" alt="Evento" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="lnr lnr-text-align-right"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
+                <ul class=" nav navbar-nav menu">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/Home/New">New</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/Home/Contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/Home/Speakers">Speakers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/Home/Evento">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/Evento">Evento</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Cadastro
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Evento/">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--header end here-->
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
