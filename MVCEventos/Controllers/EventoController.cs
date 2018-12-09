@@ -1,4 +1,5 @@
 ﻿using MVCEventos.App_Start;
+using MVCEventos.DAL;
 using MVCEventos.Models;
 using System;
 using System.Collections.Generic;
@@ -12,19 +13,12 @@ namespace MVCEventos.Controllers
 {
     public class EventoController : Controller
     {
-        // GET: Evento
-        public ActionResult Index()
-        {
-            return View();
-        }
-
         // GET: Cadastro
         public ActionResult Cadastro()
         {
             return View();
         }
-
-
+        
         // GET: Cadastro
         public ActionResult ViewEvento()
         {
@@ -39,11 +33,9 @@ namespace MVCEventos.Controllers
                 {
                     ;
                     Evento evento = new Evento();
-                //                if (registro["Nome"] != null)
+
                 evento.Nome = Convert.ToString(registro["Nome"]);
-                //                if (registro["Local"] != null)
                 evento.Local = Convert.ToString(registro["Local"]);
-                //                if(registro["Data"].ToString() != "")
                 evento.Data = Convert.ToDateTime(registro["Data"]);
 
                 ;
@@ -62,18 +54,37 @@ namespace MVCEventos.Controllers
         {
             try
             {
-                DbContext DB = new DbContext();
-                DB.ConnectionCommand.CommandText = 
-                    "insert into Evento(Nome,Local,Data) " +
-                    "values(@Nome,@Local,@Data)";
-
-                DB.ConnectionCommand.Parameters.Add("@Nome", SqlDbType.VarChar).Value = evento.Nome;
-                DB.ConnectionCommand.Parameters.Add("@Local", SqlDbType.VarChar).Value = evento.Local;
-                DB.ConnectionCommand.Parameters.Add("@Data", SqlDbType.DateTime).Value = evento.Data;
-
-                DB.Connection.BeginTransaction().Commit();
-                Console.WriteLine (DB.ConnectionCommand.ExecuteNonQuery());
-                DB.Connection.Close();
+                EventoDAL.SalvarEvento(evento);
+            }
+            catch (Exception)
+            {
+                System.Console.WriteLine("falhou");
+                return View(nameof(Cadastro));
+                throw;
+            }
+            return View(nameof(Cadastro));
+        }
+        [HttpPost, ActionName("EditarEventoPOST")]
+        public ActionResult EditarEvento(Evento evento)
+        {
+            try
+            {
+                EventoDAL.UpdateEvento(evento);
+            }
+            catch (Exception)
+            {
+                System.Console.WriteLine("falhou");
+                return View(nameof(Cadastro));
+                throw;
+            }
+            return View(nameof(Cadastro));
+        }
+        [HttpPost, ActionName("DeletarEventoPOST")]
+        public ActionResult DeletarEvento(Evento evento)
+        {
+            try
+            {
+                EventoDAL.DeleteEvento(evento);
             }
             catch (Exception)
             {

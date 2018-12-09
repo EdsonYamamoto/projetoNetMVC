@@ -160,6 +160,7 @@
     <Compile Include="Controllers\EventoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="DAL\EventoDAL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -187,6 +188,9 @@
     <Content Include="Others\Evento\assets\fonts\fontawesome-webfont.svg" />
     <Content Include="Others\Evento\assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Others\Evento\assets\fonts\Linearicons-Free.svg" />
+    <Content Include="wwwroot\fonts\et-line.svg" />
+    <Content Include="wwwroot\fonts\fontawesome-webfont.svg" />
+    <Content Include="wwwroot\fonts\Linearicons-Free.svg" />
     <Content Include="wwwroot\img\bg\bg-img.png" />
     <Content Include="wwwroot\img\bg\inner_cover.png" />
     <Content Include="wwwroot\img\bg\slider.png" />
@@ -289,6 +293,21 @@
     <Content Include="Views\Home\Evento.cshtml" />
     <Content Include="Views\Evento\Cadastro.cshtml" />
     <Content Include="Views\Evento\ViewEvento.cshtml" />
+    <Content Include="wwwroot\fonts\FontAwesome.otf" />
+    <Content Include="wwwroot\fonts\et-line.eot" />
+    <Content Include="wwwroot\fonts\et-line.ttf" />
+    <Content Include="wwwroot\fonts\et-line.woff" />
+    <Content Include="wwwroot\fonts\fontawesome-webfont.eot" />
+    <Content Include="wwwroot\fonts\fontawesome-webfont.ttf" />
+    <Content Include="wwwroot\fonts\fontawesome-webfont.woff" />
+    <Content Include="wwwroot\fonts\fontawesome-webfont.woff2" />
+    <Content Include="wwwroot\fonts\Linearicons-Free.woff2" />
+    <Content Include="wwwroot\fonts\ionicons.eot" />
+    <Content Include="wwwroot\fonts\ionicons.ttf" />
+    <Content Include="wwwroot\fonts\ionicons.woff" />
+    <Content Include="wwwroot\fonts\Linearicons-Free.eot" />
+    <Content Include="wwwroot\fonts\Linearicons-Free.ttf" />
+    <Content Include="wwwroot\fonts\Linearicons-Free.woff" />
     <None Include="wwwroot\Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="wwwroot\Scripts\jquery-3.3.1.js" />
     <Content Include="wwwroot\Scripts\jquery-3.3.1.min.js" />
@@ -313,7 +332,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\New.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\AspNetLandPage.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

@@ -1,15 +1,51 @@
-﻿<table>
-    <tr>
-        <td>Nome</td>
-        <td>Local</td>
-        <td>Data</td>
-    </tr>
-@foreach (MVCEventos.Models.Evento evento in ViewBag.Eventos)
-{
-    <tr>
-        <td> <h3>@evento.Nome</h3> </td>
-        <td> <h3>@evento.Local</h3> </td>
-        <td> <h3>@evento.Data</h3> </td>
-    </tr>
-}
-</table>
+﻿<!--about the event -->
+<section class="pt100 pb100">
+    <div class="container">
+        <div class="section_title">
+            <h3 class="title">
+                About the event
+            </h3>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing eli. Integer iaculis in lacus a sollicitudin. Ut hendrerit hendrerit nisl a accumsan. Pellentesque convallis consectetur tortor id placerat. Curabitur a pulvinar nunc. Maecenas laoreet finibus lectus, at volutpat ligula euismod.
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <p>
+                    In rhoncus massa nec  sollicitudin. Ut hendrerit hendrerit nisl a accumsan. Pellentesque convallis consectetur tortor id placerat. Curabitur a pulvinar nunc. Maecenas laoreet finibus lectus, at volutpat ligula euismod quis. Maecenas ornare, ex in malesuada tempus.
+                </p>
+            </div>
+        </div>
+
+        <!--event features-->
+        <div class="row justify-content-center mt30">
+            <div class="col-12 col-md-12 col-lg-12">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Local</th>
+                                <th scope="col">Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (MVCEventos.Models.Evento evento in ViewBag.Eventos)
+                            {
+                                <tr class="icon_box_one">
+                                    <td scope="row"> @evento.Nome </td>
+                                    <td scope="row"> @evento.Local </td>
+                                    <td scope="row"> @evento.Data </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+            </div>
+
+        </div>
+        <!--event features end-->
+    </div>
+</section>
+<!--about the event end -->

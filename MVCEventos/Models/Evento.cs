@@ -21,6 +21,7 @@ namespace MVCEventos.Models
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
 
+        public int id { get; set; }
         public string Nome { get; set; }
         public string Local { get; set; }
         public DateTime Data { get; set; }

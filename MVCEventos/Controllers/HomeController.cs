@@ -40,5 +40,11 @@ namespace MVCEventos.Controllers
 
             return View();
         }
+
+        public ActionResult AspNetLandPage()
+        {
+
+            return View();
+        }
     }
 }
