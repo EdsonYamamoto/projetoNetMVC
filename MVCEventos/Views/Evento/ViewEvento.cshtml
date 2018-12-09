@@ -1,0 +1,15 @@
+﻿<table>
+    <tr>
+        <td>Nome</td>
+        <td>Local</td>
+        <td>Data</td>
+    </tr>
+@foreach (MVCEventos.Models.Evento evento in ViewBag.Eventos)
+{
+    <tr>
+        <td> <h3>@evento.Nome</h3> </td>
+        <td> <h3>@evento.Local</h3> </td>
+        <td> <h3>@evento.Data</h3> </td>
+    </tr>
+}
+</table>

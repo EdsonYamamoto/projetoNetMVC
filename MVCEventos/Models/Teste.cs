@@ -4,15 +4,16 @@ namespace MVCEventos.Models
     using System.Data.Entity;
     using System.Linq;
 
-    public class Evento
+    public class Teste : DbContext
     {
-        // Your context has been configured to use a 'Evento' connection string from your application's 
+        // Your context has been configured to use a 'Teste' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
-        // 'MVCEventos.Models.Evento' database on your LocalDb instance. 
+        // 'MVCEventos.Models.Teste' database on your LocalDb instance. 
         // 
-        // If you wish to target a different database and/or database provider, modify the 'Evento' 
+        // If you wish to target a different database and/or database provider, modify the 'Teste' 
         // connection string in the application configuration file.
-        public Evento()
+        public Teste()
+            : base("name=Teste")
         {
         }
 
@@ -20,11 +21,6 @@ namespace MVCEventos.Models
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
-
-        public string Nome { get; set; }
-        public string Local { get; set; }
-        public DateTime Data { get; set; }
-
     }
 
     //public class MyEntity

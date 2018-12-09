@@ -1,1 +1,38 @@
-﻿
+﻿@model MVCEventos.Models.Evento
+@{}
+
+<div class="content-page" style="padding-top:50px;">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container ">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h1>Cadastrar Evento</h1>
+                    <form action="CadastrarEventoPOST" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label name="Nome" class="control-label"></label>
+                            <input name="Nome" class="form-control" />
+                            <span asp-validation-for="Nome" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label name="Local" class="control-label"></label>
+                            <input name="Local" class="form-control" />
+                            <span asp-validation-for="Local" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label name="Data" class="control-label"></label>
+                            <input type="datetime-local" name="Data" class="form-control" />
+                            <span asp-validation-for="Data" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="CadastrarBalanco" class="btn btn-default" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> <!-- end container -->
+
+    </div> <!-- content -->
+
+</div>
